@@ -1,0 +1,85 @@
+/* VARIABLES */
+:root {
+  /* Colors */
+  --body-bg: hsl(212, 45%, 89%);
+  --card-bg: hsl(0, 0%, 100%);
+  --text-color: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+
+  /* Fonts */
+  --body-font-family: "Outfit", sans-serif;
+}
+
+/* GENERAL CSS */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  background-color: var(--body-bg);
+  font-weight: 550;
+  text-align: center;
+}
+
+.qr-card__main {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-component__card {
+  width: 22rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  color: var(--dark-blue);
+}
+
+.card__description {
+  padding: 0 1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 80%;
+  }
+
+  .qr-component__card {
+    width: 88%;
+  }
+
+  .card__title {
+    font-size: 1.7rem;
+    padding: 0 1.9rem;
+  }
+
+  .card__description {
+    padding: 0 2.7rem;
+  }
+}
